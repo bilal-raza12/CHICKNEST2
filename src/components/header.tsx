@@ -6,8 +6,7 @@ import {FaBars,FaTimes} from "react-icons/fa";
 import { useState } from "react";
 import { useCart } from "@/app/context/CartContext";
 const Header = () => {
-    const { cartItems} = useCart();
-    const [searchTerm, setSearchTerm] = useState("");
+
 
     const [menuOpen, setMenuOpen] = useState(false);
     const handleMenu = () => {

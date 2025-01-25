@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { useCart } from '../context/CartContext'
 const Cart = () => {
-    const {cartItems, totalPrice, removeFromCart, increaseQuantity, decreaseQuantity} = useCart()
+    const {cartItems, increaseQuantity, decreaseQuantity} = useCart()
   return (
     <div>
         <h1 className='text-4xl font-extrabold ml-[50px] mt-16'>YOUR CART</h1>
@@ -30,6 +30,7 @@ const Cart = () => {
                  </div>
             </div>
         ))}
+        
       
             
                 
