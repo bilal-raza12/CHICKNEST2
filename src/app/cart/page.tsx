@@ -1,14 +1,17 @@
 "use client"
+import React from "react"
 import Image from 'next/image'
 import { useCart } from '../context/CartContext'
 const Cart = () => {
     const {cartItems, increaseQuantity, decreaseQuantity} = useCart()
   return (
     <div>
+      <div>
+
         <h1 className='text-4xl font-extrabold ml-[50px] mt-16'>YOUR CART</h1>
         {cartItems.length === 0 && <div className='text-2xl font-bold ml-[50px] mt-16'>Your cart is empty</div>}
         {cartItems.map(item => (
-            <div key={item.slug} className='flex h-[150px] border-2 w-fit border-black flex-row items-center gap-12'>
+          <div key={item.slug} className='flex h-[150px] border-2 w-fit border-black flex-row items-center gap-12'>
                  <div className='w-[200px] h-full object-cover'><Image src={item.image} alt={item.name} width={200} height={150} className='w-full object-cover h-full'></Image></div>
                  <div className="flex flex-col">
                     <h2 className='text-xl font-extrabold'>{item.name}</h2>
@@ -26,13 +29,14 @@ const Cart = () => {
                  </div>
                  <div className="flex flex-col gap-5">
                   <h1 className='text-xl font-bold'>Total</h1>
-                  <h1 className='text-2xl font-bold'>${item.price * item?.quantity?}</h1>
+                  <h1 className='text-2xl font-bold'>${item.price * (item.quantity ?? 0)}</h1>
                  </div>
             </div>
         ))}
         
       
             
+        </div>
                 
     </div>
   )
