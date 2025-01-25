@@ -4,7 +4,7 @@ import { CiHeart } from "react-icons/ci";
 import Link from "next/link";
 import {FaBars,FaTimes} from "react-icons/fa";
 import { useState } from "react";
-import { useCart } from "@/app/context/CartContext";
+
 const Header = () => {
 
 
