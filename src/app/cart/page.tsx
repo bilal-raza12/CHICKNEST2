@@ -26,7 +26,7 @@ const Cart = () => {
                  </div>
                  <div className="flex flex-col gap-5">
                   <h1 className='text-xl font-bold'>Total</h1>
-                  <h1 className='text-2xl font-bold'>${item.price * item.quantity}</h1>
+                  <h1 className='text-2xl font-bold'>${item.price * item.quantity?}</h1>
                  </div>
             </div>
         ))}

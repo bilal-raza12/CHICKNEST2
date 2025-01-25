@@ -10,5 +10,5 @@ export interface IProduct {
     countInStock: number;
     discount?: number;
     originalPrice?: number;
-    quantity?:number;
+    quantity?:number ;
     }
