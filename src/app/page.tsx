@@ -1,5 +1,5 @@
 import Hero from "@/components/hero";
-import OnSale from "@/components/OnSale";
+// import OnSale from "@/components/OnSale";
 
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <>
 
     <Hero />
-    <OnSale />
+    {/* <OnSale /> */}
     </>
   );
 }
