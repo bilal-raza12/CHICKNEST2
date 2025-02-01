@@ -1,9 +1,10 @@
 import { OnSale } from "@/app/data/onsale";
+import { NextResponse } from "next/server";
 
 
 
 
 export async function GET() {
-  // Function implementation here
-  return new Response(JSON.stringify(OnSale));
+  // Function implementation hre
+  return  NextResponse.json(OnSale);
 }

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const OnSale = async () => {
   const API_URL = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:3000" 
-  const res = await fetch(`${API_URL}/api/onsale`,{cache:"no-cache"});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/onsale`,{cache:"no-cache"});
   const data :IProduct[] = await res.json();
   return (
     <section>
