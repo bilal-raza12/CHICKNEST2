@@ -1,10 +1,12 @@
+
 import { IProduct } from '@/app/types/types';
 import Image from 'next/image';
 import { FcRating } from "react-icons/fc";
 import Link from 'next/link';
 
 const OnSale = async () => {
-  const res = await fetch("http://localhost:3000/api/onsale",{cache:"no-cache"});
+  const API_URL = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:3000" 
+  const res = await fetch(`${API_URL}/api/onsale`,{cache:"no-cache"});
   const data :IProduct[] = await res.json();
   return (
     <section>
